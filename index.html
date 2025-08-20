@@ -1,0 +1,341 @@
+# site-
+beka site 
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beka — IT & Freelance (Астана)</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Beka — профессиональные IT и веб-услуги в Астане. Создание сайтов, настройка, обслуживание. Цены 1500–2000 ₸." />
+  <meta name="theme-color" content="#0a2540" />
+
+  <!-- Simple styles -->
+  <style>
+    :root{
+      --bg:#f6f9fc; --card:#ffffff; --accent:#0b6cff; --muted:#6b7280; --dark:#0a2540;
+      --glass: rgba(255,255,255,0.6);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#f8fbff, var(--bg));}
+    a {color:inherit; text-decoration:none}
+    header{
+      position:sticky; top:0; z-index:60; backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.65));
+      border-bottom:1px solid rgba(11,108,255,0.06);
+    }
+    .container{max-width:1100px;margin:0 auto;padding:24px;}
+    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{display:inline-flex;align-items:center;gap:10px}
+    .logo svg{width:44px;height:44px;display:block}
+    .brand h1{font-size:18px;margin:0;color:var(--dark);font-weight:700;letter-spacing:0.4px}
+    nav a{color:var(--dark);font-weight:600;padding:10px;border-radius:8px}
+    nav a.cta{background:var(--accent);color:#fff;padding:10px 14px}
+    .hero{
+      display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:48px 0;
+    }
+    .hero-left h2{font-size:34px;margin:0 0 12px;color:var(--dark);line-height:1.05}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .badge{background:rgba(11,108,255,0.08);color:var(--accent);padding:8px 10px;border-radius:999px;font-weight:700;font-size:13px}
+
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,30,80,0.06)}
+    .hero-right{display:flex;flex-direction:column;gap:12px}
+    .contact-btns{display:flex;gap:10px;flex-direction:column}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;justify-content:center;
+      padding:12px;border-radius:10px;font-weight:700;border:0;cursor:pointer;
+    }
+    .btn.call{background:linear-gradient(90deg,#00b894,#019875);color:white}
+    .btn.wa{background:#25D366;color:white}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+    .service{padding:16px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid rgba(11,108,255,0.04)}
+    .service h3{margin:0 0 8px;font-size:16px}
+    .price{font-weight:800;color:var(--dark);font-size:20px}
+
+    /* portfolio */
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .portfolio-item{height:120px;border-radius:8px;background:linear-gradient(135deg,#eef6ff,#fff);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+
+    footer{padding:32px 0;color:var(--muted);font-size:14px;margin-top:36px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:28px 0}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .nav{padding:8px 0}
+      .services{grid-template-columns:1fr}
+      .portfolio-grid{grid-template-columns:1fr}
+      .hero-left h2{font-size:26px}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#f1f5f9;font-weight:700;color:var(--dark);font-size:13px}
+    .lang-switch{display:flex;gap:8px}
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <a class="logo" href="#home" aria-label="Beka - home">
+          <!-- SVG logo: simple, professional -->
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#0b6cff"/>
+                <stop offset="1" stop-color="#00b894"/>
+              </linearGradient>
+            </defs>
+            <rect rx="18" width="100" height="100" fill="url(#g)"/>
+            <text x="50%" y="56%" text-anchor="middle" font-family="Inter, Arial" font-size="36" font-weight="800" fill="#fff">Beka</text>
+          </svg>
+        </a>
+        <div>
+          <h1>Beka — IT & Freelance</h1>
+          <div class="small muted">Астана • Веб-сайты, настройка, поддержка</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="lang-switch small" aria-hidden>
+          <button id="btn-ru" class="pill" onclick="setLang('ru')">RU</button>
+          <button id="btn-en" class="pill" onclick="setLang('en')">EN</button>
+        </div>
+        <nav aria-label="site links">
+          <a class="small" href="#services" data-i18n="nav_services">Услуги</a>
+          <a class="small" href="#portfolio" data-i18n="nav_portfolio">Портфолио</a>
+          <a class="small cta" href="#contact" data-i18n="nav_contact">Связаться</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="badge" data-i18n="badge_pro">Профессионально • Быстро • Гарантия</div>
+        <h2 data-i18n="hero_title">Создам сайт и настрою всё — от файлов до публикации</h2>
+        <p data-i18n="hero_sub">Полный цикл: дизайн, вёрстка, адаптация под мобильные, подключение домена и хостинга. Подходит для бизнеса, портфолио и фриланс-услуг.</p>
+
+        <div class="badges">
+          <span class="pill">Цена: <strong class="price">1500–2000 ₸</strong></span>
+          <span class="pill" data-i18n="badge_astana">Город: Астана</span>
+          <span class="pill" data-i18n="badge_fast">Сроки: быстро</span>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h3 data-i18n="what_included">Что включено</h3>
+          <ul class="muted small">
+            <li data-i18n="incl_1">Дизайн + адаптивная вёрстка</li>
+            <li data-i18n="incl_2">Подключение WhatsApp/Call кнопок</li>
+            <li data-i18n="incl_3">Настройка файлов и базовые SEO</li>
+            <li data-i18n="incl_4">Мини-логотип (SVG) и фавикон</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="card">
+          <h3 data-i18n="contact_me">Связаться с Бека</h3>
+          <p class="muted small" data-i18n="contact_note">Нажми кнопку — сразу звонок или WhatsApp.</p>
+          <div class="contact-btns" style="margin-top:8px">
+            <a class="btn call" href="tel:+77755026706" aria-label="Позвонить +7 775 502 6706">
+              📞 <span data-i18n="btn_call">Позвонить</span>
+            </a>
+            <a class="btn wa" href="https://wa.me/77755026706" target="_blank" rel="noreferrer" aria-label="WhatsApp +7 775 502 6706">
+              💬 <span data-i18n="btn_wa">WhatsApp</span>
+            </a>
+            <a class="btn" style="background:#f4f6f8" href="#contact" aria-label="Контактная форма">
+              ✉️ <span data-i18n="btn_msg">Написать</span>
+            </a>
+          </div>
+
+          <div style="margin-top:12px" class="small muted">
+            <div><strong data-i18n="phone_label">Тел:</strong> +7 775 502 6706</div>
+            <div><strong data-i18n="price_label">Услуги:</strong> от 1500 ₸</div>
+          </div>
+        </div>
+
+        <div class="card small muted">
+          <strong data-i18n="guarantee">Гарантия:</strong> поддержка после сдачи проекта (корректировки до 3 дней).
+        </div>
+      </aside>
+    </section>
+
+    <section id="services">
+      <h2 data-i18n="services_title">Услуги</h2>
+      <div class="services" style="margin-top:10px">
+        <div class="service">
+          <h3 data-i18n="svc_web">Создание сайта</h3>
+          <p class="muted small" data-i18n="svc_web_sub">Landing, Business, Portfolio — адаптивная верстка + базовая CMS (по желанию).</p>
+        </div>
+        <div class="service">
+          <h3 data-i18n="svc_setup">Настройка и деплой</h3>
+          <p class="muted small" data-i18n="svc_setup_sub">Помощь с доменом, хостингом, FTP/SFTP, публикация и SSL.</p>
+        </div>
+        <div class="service">
+          <h3 data-i18n="svc_support">Поддержка</h3>
+          <p class="muted small" data-i18n="svc_support_sub">Обновления, правки, интеграции (WhatsApp, формы, аналитика).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" style="margin-top:28px">
+      <h2 data-i18n="portfolio_title">Портфолио — примеры</h2>
+      <p class="muted small" data-i18n="portfolio_sub">Мини-превью работ. Могу прислать больше по запросу в WhatsApp.</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-item card">Landing — ecom</div>
+        <div class="portfolio-item card">Portfolio — фотограф</div>
+        <div class="portfolio-item card">Бизнес-сайт</div>
+        <div class="portfolio-item card">Сайт студии</div>
+        <div class="portfolio-item card">Личный бренд</div>
+        <div class="portfolio-item card">Интернет-каталог</div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2 data-i18n="contact_title">Контакт</h2>
+
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:12px">
+        <div class="card">
+          <form id="contact-form" onsubmit="submitForm(event)">
+            <label class="small muted">Имя / Name</label><br/>
+            <input required id="name" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;margin-top:8px" placeholder="Имя" />
+            <br/><label class="small muted" style="margin-top:10px;display:block">Email</label><br/>
+            <input required id="email" type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;margin-top:8px" placeholder="email@example.com" />
+            <br/><label class="small muted" style="margin-top:10px;display:block" data-i18n="msg_label">Сообщение</label><br/>
+            <textarea required id="message" rows="5" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;margin-top:8px" placeholder="Опиши задачу, бюджет, сроки"></textarea>
+            <div style="display:flex;gap:8px;margin-top:12px;align-items:center">
+              <button class="btn call" type="submit">✉️ <span data-i18n="send_msg">Отправить</span></button>
+              <a class="small muted" href="https://wa.me/77755026706" target="_blank" rel="noreferrer">Или WhatsApp</a>
+            </div>
+            <p id="form-msg" class="small muted" style="margin-top:10px;display:none"></p>
+          </form>
+        </div>
+
+        <aside class="card small muted">
+          <h3 data-i18n="more_info">Ещё информация</h3>
+          <p data-i18n="more_info_text">Могу сделать мультиязычный сайт (RU/EN/KK), подключить аналитику, SEO-оптимизацию и простую админку. Поддержка с тестированием и корректировками.</p>
+          <div style="margin-top:10px">
+            <strong data-i18n="phone_label">Тел:</strong> <a href="tel:+77755026706">+7 775 502 6706</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="small muted">© <strong>Beka</strong> — IT & Freelance. Астана.</div>
+        <div class="small muted">Создание сайта — <span class="price">1500–2000 ₸</span> • Быстрая сдача</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Minimal JS: i18n + form handling -->
+  <script>
+    // Translations (RU / EN)
+    const T = {
+      ru: {
+        nav_services:'Услуги', nav_portfolio:'Портфолио', nav_contact:'Связаться',
+        badge_pro:'Профессионально • Быстро • Гарантия', badge_astana:'Астана', badge_fast:'Сроки: быстро',
+        hero_title:'Создам сайт и настрою всё — от файлов до публикации',
+        hero_sub:'Полный цикл: дизайн, вёрстка, адаптация под мобильные, подключение домена и хостинга.',
+        what_included:'Что включено', incl_1:'Дизайн + адаптивная вёрстка', incl_2:'Подключение WhatsApp/Call кнопок',
+        incl_3:'Настройка файлов и базовые SEO', incl_4:'Мини-логотип (SVG) и фавикон',
+        contact_me:'Связаться с Бека', contact_note:'Нажми кнопку — сразу звонок или WhatsApp.',
+        btn_call:'Позвонить', btn_wa:'WhatsApp', btn_msg:'Написать',
+        phone_label:'Тел:', price_label:'Услуги:', guarantee:'Гарантия:', services_title:'Услуги',
+        svc_web:'Создание сайта', svc_web_sub:'Landing, Business, Portfolio — адаптивная верстка + базовая CMS (по желанию).',
+        svc_setup:'Настройка и деплой', svc_setup_sub:'Помощь с доменом, хостингом, FTP/SFTP, публикация и SSL.',
+        svc_support:'Поддержка', svc_support_sub:'Обновления, правки, интеграции (WhatsApp, формы, аналитика).',
+        portfolio_title:'Портфолио — примеры', portfolio_sub:'Мини-превью работ. Могу прислать больше по запросу в WhatsApp.',
+        contact_title:'Контакт', msg_label:'Сообщение', send_msg:'Отправить',
+        more_info:'Ещё информация', more_info_text:'Могу сделать мультиязычный сайт (RU/EN/KK), подключить аналитику, SEO-оптимизацию и простую админку.'
+      },
+      en: {
+        nav_services:'Services', nav_portfolio:'Portfolio', nav_contact:'Contact',
+        badge_pro:'Professional • Fast • Guarantee', badge_astana:'Astana', badge_fast:'Timeline: fast',
+        hero_title:'I build websites and set everything up — from files to go-live',
+        hero_sub:'Full cycle: design, responsive front-end, mobile, domain & hosting setup.',
+        what_included:'What’s included', incl_1:'Design + responsive development', incl_2:'WhatsApp / Call buttons integration',
+        incl_3:'Files setup & basic SEO', incl_4:'Mini logo (SVG) & favicon',
+        contact_me:'Contact Beka', contact_note:'Tap a button — call or WhatsApp instantly.',
+        btn_call:'Call', btn_wa:'WhatsApp', btn_msg:'Message',
+        phone_label:'Phone:', price_label:'Services:', guarantee:'Guarantee:', services_title:'Services',
+        svc_web:'Website development', svc_web_sub:'Landing, Business, Portfolio — responsive + optional CMS.',
+        svc_setup:'Setup & Deploy', svc_setup_sub:'Domain, hosting, FTP/SFTP, publishing and SSL help.',
+        svc_support:'Support', svc_support_sub:'Updates, edits, integrations (WhatsApp, forms, analytics).',
+        portfolio_title:'Portfolio — samples', portfolio_sub:'Preview of works. I can send more via WhatsApp.',
+        contact_title:'Contact', msg_label:'Message', send_msg:'Send message',
+        more_info:'More info', more_info_text:'I can make a multilingual site (RU/EN/KK), add analytics, SEO and a simple admin.'
+      }
+    };
+
+    // Set language
+    function setLang(lang){
+      const map = T[lang] || T.ru;
+      document.documentElement.lang = (lang === 'en') ? 'en' : 'ru';
+      // apply all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(map[key]) el.textContent = map[key];
+      });
+      // style selected language button
+      document.getElementById('btn-ru').style.opacity = lang === 'ru' ? '1' : '0.6';
+      document.getElementById('btn-en').style.opacity = lang === 'en' ? '1' : '0.6';
+    }
+
+    // init default language RU
+    setLang('ru');
+
+    // Simple form handler (client-side only)
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const out = document.getElementById('form-msg');
+
+      // This is a client-only demo: open WhatsApp with prefilled text for real contact
+      const waText = encodeURIComponent(`Привет, я ${name}. Задача: ${msg}. Email: ${email}`);
+      const waUrl = `https://wa.me/77755026706?text=${waText}`;
+      out.style.display = 'block';
+      out.textContent = 'Открываю WhatsApp для отправки сообщения...';
+      // open wa in new tab (user can continue)
+      window.open(waUrl, '_blank');
+      out.textContent = 'Сообщение открыто в WhatsApp. Также можно позвонить: +7 775 502 6706';
+      // optionally clear form
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+
+  <!-- Structured data (JSON-LD) for contact -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Beka",
+    "jobTitle":"Web Developer & Freelancer",
+    "telephone":"+77755026706",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Astana",
+      "addressCountry": "KZ"
+    },
+    "url": ""
+  }
+  </script>
+</body>
+</html>
